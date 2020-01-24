@@ -1,5 +1,7 @@
 let grid = undefined;
 let stroke1 = prompt("Should the snowman's hat be blue, yellow, or red?", "red");
+let stroke2 = prompt("What color should the snowman's face be? Red or Black?","black");
+let stroke3 = prompt("What color should the snowman's cabin be? Brown or black?", "black");
 function setup(){
     createCanvas( 1000, 800);
     background("pink");
@@ -27,7 +29,7 @@ line(400, 120, 600, 120);
 fill(0);
 quad(400, 50, 600, 50, 550, 120, 450, 120);
 //eyes
-stroke(0);
+stroke(stroke2);
 strokeWeight(50);
 point(425, 200);
 point(475, 200);
@@ -35,4 +37,9 @@ point(475, 200);
 noFill();
 strokeWeight(10);
 arc (500, 200, 80, 80, 0, HALF_PI);
+//House
+strokeWeight(10);
+stroke(stroke3);
+line(175, 175, 175, 115);
+triangle(130, 175, 158, 120, 186, 175);
 }
